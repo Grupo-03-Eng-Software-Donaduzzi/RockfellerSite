@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #0068DF;
+}
+
+.titulo {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-family: 'Verlag';
+}
+
+.pergunta {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pergunta p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.pergunta label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#cadastro,
+#resultado-final {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 31.8%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: 30px auto 0;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #FFD700;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e6c200;
+}
+
+.botao-voltar {
+    display: none;
+    margin: 30px auto 0;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #FFD700;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.botao-voltar:hover {
+    background-color: #e6c200;
+}

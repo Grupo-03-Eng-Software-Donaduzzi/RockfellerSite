@@ -1,0 +1,40 @@
+.detalhe {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(to right, blue, rgb(210, 224, 15));
+    position: relative;
+}
+
+.detalhe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.detalhe .conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.kids-titulo{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: white;
+  z-index: 2;
+  text-align: center;
+}
+
+.botao-descricao{
+  border-radius: 10px;
+  padding: 5px 10px;
+  
+}

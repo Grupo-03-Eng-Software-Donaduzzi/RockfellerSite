@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Verlag';
+    src: url('../fonts/Verlag-Book.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Verlag';
+    src: url('../fonts/Verlag-Light.otf');
+    font-weight: light;
+    font-style: normal;
+}

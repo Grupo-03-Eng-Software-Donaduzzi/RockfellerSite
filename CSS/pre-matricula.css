@@ -1,0 +1,88 @@
+html {
+  scroll-behavior: smooth;
+}
+.matricula {
+  padding: 40px;
+  background-color: #0068df;
+  color:white;
+}
+
+.titulo-matricula {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.texto-matricula p{
+    text-align: center;
+    font-size: 25px;
+}
+
+.conteudo-matricula {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:2em;
+}
+
+.texto-matricula {
+  flex: 1;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+.formulario-matricula {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.formulario-matricula input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formulario-matricula button {
+  padding: 10px;
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formulario-matricula button:hover {
+  background-color: #e6c200;
+}
+
+
+@media screen and (max-width: 768px){
+    .texto-matricula p{
+      font-size: 20px;
+    }
+    .titulo-matricula{
+      font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .conteudo-matricula p{
+      margin-left: 0px;
+      max-width: unset;
+    }
+    .conteudo-matricula h2{
+      margin-left: 40px;
+    }
+    .conteudo-matricula{
+      margin-left: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+}

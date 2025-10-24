@@ -1,0 +1,110 @@
+.comentarios-geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.chamada-comentarios{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    margin-top: 1em;
+}
+.comentarios-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.comentarios {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.comentario {
+    position: relative;
+    min-width: 257px;
+    height: 300px;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: white;
+    border: 4px solid var(--dark-blue);
+    border-radius: 10px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.avaliacao-estrelas {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  font-size: 2em;
+  color: #d97f00;    
+  user-select: none;
+  transform: translate(-50%, -50%);
+}
+
+.chamada-comentarios + .comentarios-container{
+    margin-top: 30px;
+}
+
+.comentario .texto {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.comentario .autor {
+    text-align: left;
+    align-self: flex-start;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.botoes button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background-color: rgb(255, 230, 0);
+}
+
+@media screen and (max-width: 1024px){
+  .chamada-comentarios{
+      width: 70%;
+      text-align: center;
+    }
+}
+@media screen and (max-width: 768px){
+    .comentarios-container{
+        max-width: 530px;
+    }
+}
+@media screen and (max-width: 425px){
+    .comentarios-container{
+        max-width: 265px;
+    }
+    .chamada-comentarios{
+        font-size: 25px;
+    }
+}

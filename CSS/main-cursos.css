@@ -1,0 +1,238 @@
+:root {
+    --orange: #FF9500;
+    --blue: #0068DF;
+    --dark-blue: #033864;
+    --yellow: #FFE710;
+}
+
+.descricao-cursos {
+    display: flex;
+    margin: 2em;
+    gap: 2em;
+    justify-content: center;
+}
+
+.descricao-cursos-metade {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulo-descricao {
+    font-size: 2em;
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+
+.corpo-descricao {
+    font-size: 25px;
+}
+
+.corpo-descricao>strong {
+    font-weight: 500;
+}
+
+.botao-descricao {
+    font-size: 1.5em;
+    background-color: var(--orange);
+    margin-top:1em;
+}
+
+.img-descricao {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+.corpo-descricao+.corpo-descricao {
+    margin-top: 0.5em;
+}
+
+.secao-livros-cursos {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: var(--blue);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.container-livros-cursos {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    hyphens: auto;
+}
+
+.livros-cursos {
+    width: 30%;
+    background: linear-gradient(118deg, rgba(88, 149, 219, 1) 0%, var(--blue) 50%, var(--blue) 100%);
+    padding: 1em;
+    border-radius: 0.5em;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.1em;
+    flex-grow: 1;
+}
+
+.livros-cursos.principal-60 {
+    width: 65%;
+    flex-grow: 0.5;
+    background: none;
+    border: 0;
+    background-color: var(--blue);
+}
+
+.livros-cursos.principal-30 {
+    background: none;
+    border: 0;
+    background-color: var(--blue);
+}
+
+
+.livros-subtitulo {
+    font-size: 1em;
+}
+
+.livros-img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.livros-corpo {
+    text-align: justify;
+    margin-bottom: 0.5em;
+}
+
+.secao-aplicativo {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: auto;
+    margin-top: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: var(--blue);
+}
+
+.secao-aplicativo-metade {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 35%;
+}
+
+.aplicativo-titulo {
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+.aplicativo-corpo {
+    margin-bottom: 0.5em;
+    text-align: justify;
+    font-size: 1.25em;
+    width: 100%;
+}
+
+.aplicativo-botao {
+    box-sizing: border-box;
+    width: 40%;
+    padding: 0.5em;
+}
+
+.img-stores {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.img-aplicativo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .img-descricao {
+        height: 90%;
+        width: 100%;
+    }
+
+    .titulo-descricao {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .descricao-cursos {
+        gap: 0;
+        flex-direction: column-reverse;
+    }
+
+    .descricao-cursos-metade {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .corpo-descricao {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .botao-descricao {
+        margin-top: 1em;
+    }
+
+    .container-livros-cursos {
+        width: 90%;
+    }
+
+    .livros-cursos {
+        width: 100%;
+    }
+
+
+    .secao-aplicativo {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .secao-aplicativo-metade {
+        width: 70%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .img-descricao {
+        display: none;
+    }
+
+    .secao-livros-cursos {
+        display: none;
+    }
+
+    .botao-descricao {
+        font-size: 1.1em;
+    }
+
+    .aplicativo-titulo {
+        width: 100%;
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+    }
+
+    .aplicativo-corpo {
+        text-align: justify;
+        font-size: 1em;
+    }
+
+    .aplicativo-botao {
+        width: 50%;
+    }
+}

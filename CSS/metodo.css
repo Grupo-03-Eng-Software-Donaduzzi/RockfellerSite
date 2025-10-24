@@ -1,0 +1,60 @@
+.metodo {
+    margin: 0;
+    padding: 0;
+    background-color: #0068DF;
+    text-align: center;
+}
+
+.metodo-titulo {
+    padding-top: 1em;
+    margin-top: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.metodo-exclusivo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.metodo-1,
+.metodo-2,
+.metodo-3,
+.metodo-4 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+}
+
+.metodo-1 img,
+.metodo-2 img,
+.metodo-3 img,
+.metodo-4 img {
+    width: 180px;
+    height: 125px;
+}
+
+.titulo-metodo-1+.texto-metodo-1,
+.titulo-metodo-2+.texto-metodo-2,
+.titulo-metodo-3+.texto-metodo-3,
+.titulo-metodo-4+.texto-metodo-4 {
+    margin-top: 10px;
+}
+
+.metodo-img{
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .metodo-titulo {
+    margin-top: 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+}
