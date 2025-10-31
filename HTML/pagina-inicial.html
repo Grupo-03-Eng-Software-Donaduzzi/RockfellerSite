@@ -8,20 +8,19 @@
         content="rockfeller, toledo, rockfeller toledo, escola de ingles, escola de ingles para adultos, escola de ingles para crianças, escola de ingles para adolecentes, escola de ingles boa em toledo, escola de ingles com IA">
     <title>Rockfeller Toledo</title>
     <link rel="icon" href="../MEDIA/favicon.webp">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/chamariz.css">
-    <link rel="stylesheet" href="../css/metodo.css">
-    <link rel="stylesheet" href="../css/escolha-de-cursos.css">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/historia.css">
-    <link rel="stylesheet" href="../css/rodape.css">
-    <link rel="stylesheet" href="../css/popup.css">
-    <link rel="stylesheet" href="../css/whats-button.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/header.CSS">
+    <link rel="stylesheet" href="../CSS/chamariz.CSS">
+    <link rel="stylesheet" href="../CSS/metodo.CSS">
+    <link rel="stylesheet" href="../CSS/escolha-de-cursos.CSS">
+    <link rel="stylesheet" href="../CSS/cards.CSS">
+    <link rel="stylesheet" href="../CSS/historia.CSS">
+    <link rel="stylesheet" href="../CSS/rodape.CSS">
+    <link rel="stylesheet" href="../CSS/popup.CSS">
+    <link rel="stylesheet" href="../CSS/whats-button.CSS">
     <!-- fontes -->
-    <link rel="stylesheet" href="../css/verlag.css">
+    <link rel="stylesheet" href="../CSS/verlag.CSS">
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/CSS2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- /fontes -->
     <script src="../js/popup.js"></script>
@@ -39,44 +38,11 @@
     </div>
     <header>
         <div class="chamariz">
-            <div class="container-imagem-chamariz">
-                <img class="imagem-chamariz" src="../MEDIA/BANNER-LP-AULA-EXPERIMENTAL-FINAL-1.webp" alt="Banner">
-
-                <!-- Formulário sobre o banner -->
-                <form class="chamariz-form" action="#" method="post">
-                    <h3>Agende sua aula experimental</h3>
-
-                    <div class="form-row">
-                        <input type="text" name="nome" placeholder="Nome" required>
-                        <input type="number" name="idade" placeholder="Idade" min="1" max="120">
-                    </div>
-
-                    <div class="form-row">
-                        <select name="curso" required>
-                            <option value="">Curso</option>
-                            <option value="kids">Kids</option>
-                            <option value="teens">Teens</option>
-                            <option value="adults">Adults</option>
-                        </select>
-                        <input type="text" name="horario" placeholder="Horário disponível">
-                    </div>
-
-                    <div class="form-row">
-                        <input type="tel" name="telefone" placeholder="Telefone (ex: 44999990000)" required>
-                        <select name="nivel" required>
-                            <option value="">Nível de inglês</option>
-                            <option value="iniciante">Iniciante</option>
-                            <option value="basico">Básico</option>
-                            <option value="intermediario">Intermediário</option>
-                            <option value="avancado">Avançado</option>
-                            <option value="fluente">Fluente</option>
-                        </select>
-                    </div>
-
-                    <button type="submit">Quero minha aula grátis</button>
-                </form>
+            <a href="cursos.html" class="container-imagem-chamariz">
+                <img class="imagem-chamariz" src="../MEDIA/BANNER SITE - DESKTOP.png" href="chamariz" width="250">
+                <img class="imagem-chamariz-mobile" src="../MEDIA/BANNER SITE - MOBILE.png" href="chamariz" width="250">
                 <!-- Imagem do chamariz -->
-            </div>
+            </a>
             <nav class="navbar">
                 <div class="imagem-logo">
                     <a href="pagina-inicial.html">
@@ -104,25 +70,18 @@
                 <div class="mobile-navbar-container" id="mobileNavbar">
                     <div class="mobile-navbar-items">
                         <a href="kids.html">Kids</a>
-                        <a href="teens.html">
-                <div class="titulo-metodo-3">
-                    <h3>Professores nativos</h3>
+                        <a href="teens.html">Teens</a>
+                        <a href="adults.html">Adults</a>
+                        <a href="cursos.html">Todos os cursos</a>
+                        <a class="teste-ingles-button" href="teste-seu-ingles.html">Teste seu inglês!</a>
+                    </div>
                 </div>
-                <div class="texto-metodo-3">
-                    <p>"Native Speakers" - Interaja com professores da países como EUA, Reino Unido, Canadá e Austrália
-                        para um inglês autêntico</p>
-                </div>
-            </div>
-            <div class="metodo-4">
-                <img class="metodo-img" src="../MEDIA/progress-tracking.png" alt="dashboards">
-                <div class="titulo-metodo-4">
-                    <h3>Dashboard de progresso</h3>
-                </div>
-                <div class="texto-metodo-4">
-                    <p>"Progress Tracking" - Acompanhe sua evolução em tempo real com métricas e análises detalhadas
-                        sobre seu desempenho</p>
-                </div>
-            </div>
+            </nav>
+        </div>
+    </header>
+    <div class="metodo" >
+        <div class="metodo-titulo">O Método Rockfeller</div>
+        <div class="metodo-exclusivo" id="metodos">
         </div>
     </div>
     <div class="select">
@@ -251,6 +210,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
         </a>
     </div>
+    <script src="../JS/getMetodos.js"></script>
 </body>
 
 </html>
