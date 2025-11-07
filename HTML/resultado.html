@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultado do Teste de Nivelamento</title>
+    <link rel="stylesheet" href="../CSS/resultado.css" />
+</head>
+
+<body>
+    <main id="resultado"></main>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const acertos = parametros.get("acertos");
+        const total = parametros.get("total");
+
+        const main = document.getElementById("resultado");
+
+        if (acertos && total) {
+            main.innerHTML = `
+        <h1>Resultado do Teste</h1>
+        <p>Você acertou <strong>${acertos}</strong> de <strong>${total}</strong> questões.</p>
+        <button id="contato">Entrar em Contato</button>
+        <button id="refazer">Refazer Teste</button>
+      `;
+
+            document.getElementById("contato").addEventListener("click", () => {
+                window.open("https://wa.me/5545998008523?text=Olá! Fiz o teste de nivelamento e gostaria de mais informações.", "_blank");
+            });
+
+            document.getElementById("refazer").addEventListener("click", () => {
+                window.location.href = "index.html"; // Volta pra fazer o teste de novo
+            });
+        } else {
+            main.innerHTML = `<p>Você não completou o teste. Redirecionando...</p>`;
+            setTimeout(() => {
+                window.location.href = "index.html";
+
+            }, 1500);
+        }
+    </script>
+</body>
+
+</html>

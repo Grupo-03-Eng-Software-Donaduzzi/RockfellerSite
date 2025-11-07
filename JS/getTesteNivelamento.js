@@ -1,7 +1,6 @@
 const URL = "https://auxnrhf1.api.sanity.io/v2025-11-06/data/query/production?query=*%5B_type+%3D%3D+%22teste_nivelamento%22%5D%7B%0A++titulo%2C%0A++perguntas%5B%5D%7B%0A++++enunciado%2C%0A++++alternativas%2C%0A++++resposta_correta%0A++%7D%0A%7D%0A&perspective=drafts";
 
 async function carregarTeste() {
-    console.log("🟢 AOOO");
 
     try {
         const resposta = await fetch(URL);
@@ -45,7 +44,8 @@ async function carregarTeste() {
 
         const botao = document.createElement("button");
         botao.textContent = "Enviar Respostas";
-        botao.onclick = () => mostrarResultado(teste);
+        botao.onclick = () => 
+        mostrarResultado(teste);
         main.appendChild(botao);
 
     } catch (erro) {
@@ -68,6 +68,9 @@ function mostrarResultado(teste) {
             acertos++;
         }
     });
+
+    const total = teste.perguntas.length;
+    window.location.href = `resultado.html?acertos=${acertos}&total=${total}`;
 
     const resultado = document.createElement("div");
     resultado.id = "resultado-final";
