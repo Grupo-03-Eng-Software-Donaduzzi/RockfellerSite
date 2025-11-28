@@ -61,25 +61,25 @@ async function carregarDadosEmpresa(){
 
 
 
-        let liWhatsapp = document.createElement('li');
-        let aWhats = document.createElement('a');
-        aWhats.href = dados.whatsapp;
-        aWhats.target='_blank';
-        let imgWhats = document.createElement('img');
-        imgWhats.src = "../MEDIA/whats.png"
-        imgWhats.alt = 'WhatsApp'
-        aWhats.appendChild(imgWhats);
-        liWhatsapp.append(aWhats);
+            let liWhatsapp = document.createElement('li');
+            let aWhats = document.createElement('a');
+            aWhats.href = dados.whatsapp;
+            aWhats.target='_blank';
+            let imgWhats = document.createElement('img');
+            imgWhats.src = "../MEDIA/whats.png"
+            imgWhats.alt = 'WhatsApp'
+            aWhats.appendChild(imgWhats);
+            liWhatsapp.append(aWhats);
 
 
-        let ulRedes = document.createElement('ul');
-        ulRedes.classList.add('redes-sociais');
-        ulRedes.append(liWhatsapp, liInsta, liYouTube, liSpotify);
+            let ulRedes = document.createElement('ul');
+            ulRedes.classList.add('redes-sociais');
+            ulRedes.append(liWhatsapp, liInsta, liYouTube, liSpotify);
 
 
-        main.append(divEndereco, divEntreContato, divTelefone, ulRedes);
+            main.append(divEndereco, divEntreContato, divTelefone, ulRedes);
 
-    }catch{
+        }catch{
         console.error('Erro ao carregar redes', error);
     }
 }

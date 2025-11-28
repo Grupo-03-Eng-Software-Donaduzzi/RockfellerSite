@@ -228,4 +228,91 @@ header {
     }
 }
 
+/* estilo para o dropdown de cursos (usando <details>) */
+.opcoes-cursos {
+    position: relative;
+    display: inline-block;
+    margin: 0 12px;
+    font-family: inherit;
+}
+
+/* summary como botão/link do menu */
+.opcoes-cursos > summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: inherit;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+}
+
+/* remover marcador nativo (triângulo) */
+.opcoes-cursos > summary::-webkit-details-marker { display: none; }
+.opcoes-cursos > summary::marker { display: none; }
+
+/* adicione um pequeno ícone (triângulo) via CSS se quiser */
+.opcoes-cursos > summary::after {
+    content: "▾";
+    font-size: 0.75em;
+    opacity: 0.9;
+    transition: transform .18s ease;
+}
+
+/* quando aberto, rotaciona o ícone */
+.opcoes-cursos[open] > summary::after {
+    transform: rotate(-180deg);
+}
+
+/* lista que aparece */
+.opcoes-cursos .opcoes-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 180px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 6px 0;
+    z-index: 999;
+    list-style: none;
+}
+
+/* mostrar quando o details estiver aberto */
+.opcoes-cursos[open] .opcoes-menu {
+    display: block;
+}
+
+/* itens do submenu */
+.opcoes-cursos .opcoes-menu li a {
+    display: block;
+    padding: 10px 14px;
+    color: #111;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .12s;
+}
+.opcoes-cursos .opcoes-menu li a:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+/* adaptativo: no mobile o menu pode ficar full-width/estático */
+@media (max-width: 768px) {
+    .opcoes-cursos .opcoes-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 0;
+    }
+    .opcoes-cursos > summary {
+        padding: 12px 8px;
+    }
+}
+
 
