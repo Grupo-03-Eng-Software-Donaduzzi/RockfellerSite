@@ -1,0 +1,73 @@
+:root {
+    --orange: #FF9500;
+    --blue: #0068DF;
+    --dark-blue: #033864;
+    --white: #fff;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, var(--blue), var(--dark-blue));
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 1em;
+}
+
+main {
+    background: var(--white);
+    color: var(--dark-blue);
+    border-radius: 1em;
+    text-align: center;
+    padding: 2em;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: var(--orange);
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+button {
+    padding: 0.8em 1.2em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contato {
+    background: var(--orange);
+    color: var(--dark-blue);
+}
+
+#refazer {
+    background: var(--blue);
+    color: var(--white);
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1.5em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
