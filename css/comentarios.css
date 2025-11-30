@@ -24,7 +24,6 @@
     display: flex;
     transition: transform 0.3s ease;
 }
-
 .comentario {
     position: relative;
     min-width: 257px;
@@ -46,7 +45,7 @@
   bottom: 10px;
   left: 50%;
   font-size: 2em;
-  color: #d97f00;    
+  color: #d97f00;
   user-select: none;
   transform: translate(-50%, -50%);
 }
@@ -60,13 +59,19 @@
     margin-bottom: 10px;
 }
 
-.comentario .autor {
+.comentario {
     text-align: left;
     align-self: flex-start;
     font-weight: bold;
     color: #555;
     font-size: 14px;
     margin-top: 20px;
+}
+
+.autor {
+    text-align: center;
+    align-self: center;
+
 }
 
 .botoes {
@@ -102,9 +107,31 @@
 }
 @media screen and (max-width: 425px){
     .comentarios-container{
-        max-width: 265px;
+        max-width: 100%; 
+        padding: 20px 10px; 
     }
+
     .chamada-comentarios{
-        font-size: 25px;
+        font-size: 22px; 
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    .comentario {
+        min-width: 220px; 
+        height: 320px; 
+        margin: 5px;
+        padding: 8px;
+        font-size: 13px; 
+    }
+
+    .avaliacao-estrelas {
+        font-size: 1.5em;
+        bottom: 5px;
+    }
+
+    .botoes button {
+        padding: 4px 8px;
+        font-size: 12px;
     }
 }
