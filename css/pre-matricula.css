@@ -4,7 +4,7 @@ html {
 .matricula {
   padding: 40px;
   background-color: #0068df;
-  color:white;
+  color: white;
 }
 
 .titulo-matricula {
@@ -13,7 +13,7 @@ html {
   font-size: 40px;
   font-weight: bold;
 }
-.texto-matricula p{
+.texto-matricula p {
     text-align: center;
     font-size: 25px;
 }
@@ -23,7 +23,7 @@ html {
   align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap:2em;
+  gap: 2em;
 }
 
 .texto-matricula {
@@ -62,25 +62,136 @@ html {
   background-color: #e6c200;
 }
 
+/* formulário pré-matrícula - estética consistente com o site */
+:root{
+  --accent: #0b84ff;
+  --bg-section: linear-gradient(180deg,#f4fbff 0%, #eef6ff 100%);
+  --text: #111;
+  --input-bg: rgba(255,255,255,0.9);
+  --radius: 10px;
+}
 
-@media screen and (max-width: 768px){
-    .texto-matricula p{
+/* seção inteira com cor de fundo */
+.pre-matricula{
+  width: 100%;
+  background: var(--bg-section);
+  padding: 56px 16px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.pre-matricula .container{
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+/* título alinhado ao centro, cor do site */
+.pre-matricula-title{
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin: 0 0 18px 0;
+  text-align: center;
+}
+
+/* formulário integrado à seção - sem "card" */
+.pre-matricula-form{
+  background: transparent; /* sem caixa branca */
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+/* layout em grid para campos */
+.pre-matricula-form .row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+/* quando o campo precisa ocupar toda a linha */
+.pre-matricula-form .row.full {
+  grid-template-columns: 1fr;
+}
+
+/* estilos dos inputs para ficar suave sobre o fundo */
+.pre-matricula-form input[type="text"],
+.pre-matricula-form input[type="email"],
+.pre-matricula-form input[type="tel"],
+.pre-matricula-form input[type="number"],
+.pre-matricula-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: var(--input-bg);
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* botão principal destacado */
+.btn-pre-matricula{
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,var(--accent),#6ab7ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* alinhar botão e select final na mesma linha (quando houver) */
+.pre-matricula-form .field.submit{
+  display: flex;
+  align-items: center;
+}
+
+/* responsivo: colunas viram linhas */
+@media (max-width: 860px){
+  .pre-matricula-form .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* estados de foco mais perceptíveis */
+.pre-matricula-form input:focus,
+.pre-matricula-form select:focus{
+  box-shadow: 0 6px 20px rgba(11,132,255,0.06);
+  border-color: rgba(11,132,255,0.45);
+}
+
+/* pequeno ajuste de tipografia/espacamento */
+.pre-matricula .container { padding: 0 12px; }
+
+@media screen and (max-width: 768px) {
+    .texto-matricula p {
       font-size: 20px;
     }
-    .titulo-matricula{
+    .titulo-matricula {
       font-size: 28px;
     }
 }
 
-@media screen and (max-width: 425px){
-    .conteudo-matricula p{
+@media screen and (max-width: 425px) {
+    .conteudo-matricula p {
       margin-left: 0px;
       max-width: unset;
     }
-    .conteudo-matricula h2{
+    .conteudo-matricula h2 {
       margin-left: 40px;
     }
-    .conteudo-matricula{
+    .conteudo-matricula {
       margin-left: 0;
       flex-direction: column;
       align-items: center;
