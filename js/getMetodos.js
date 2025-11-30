@@ -1,6 +1,7 @@
-const URL = "https://auxnrhf1.api.sanity.io/v2025-10-25/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%22metodos%22%0A%5D%0A%7B%0A++%27icone%27%3A+icone.asset-%3Eurl%2C%0A++titulo%2C%0A++descricao%0A%7D%0A&perspective=drafts";
 
 async function carregarMetodos() {
+    const URL = "https://auxnrhf1.api.sanity.io/v2025-10-25/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%22metodos%22%0A%5D%0A%7B%0A++%27icone%27%3A+icone.asset-%3Eurl%2C%0A++titulo%2C%0A++descricao%0A%7D%0A&perspective=drafts";
+
     try {
         const response = await fetch(URL);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -11,7 +12,7 @@ async function carregarMetodos() {
         const main = document.querySelector("div#metodos");
         if (!main) throw new Error('Elemento #metodos não encontrado no DOM');
 
-
+        console.log(result);
         for (let i = 0; i < result.length; i++) {
             const item = result[i] || {};
 

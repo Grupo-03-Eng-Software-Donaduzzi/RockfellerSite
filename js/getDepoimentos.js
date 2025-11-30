@@ -1,4 +1,3 @@
-const URL = "https://auxnrhf1.api.sanity.io/v2025-10-25/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%22depoimentos%22%0A%5D%0A%7B%0A++nome%2C%0A++mensagem%2C%0A++nota%0A%7D&perspective=drafts";
 
 function renderStars(n) {
     const num = Math.max(0, Math.min(5, Math.round(Number(n) || 0)));
@@ -8,6 +7,8 @@ function renderStars(n) {
 }
 
 async function carregarDepoimentos() {
+const URL = "https://auxnrhf1.api.sanity.io/v2025-10-25/data/query/production?query=*%0A%5B%0A++_type+%3D%3D+%22depoimentos%22%0A%5D%0A%7B%0A++nome%2C%0A++mensagem%2C%0A++nota%0A%7D&perspective=drafts";
+
     try {
         const response = await fetch(URL);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
