@@ -10,7 +10,7 @@ const callbackHideWhats = (entries) => {
 };
 const optionsHideWhats = {
     root: null,
-    rootMargin: "0% 0% 0% 0%",
+    rootMargin: "0px 0px 0px 0px",
     threshold: 0,
 };
 
