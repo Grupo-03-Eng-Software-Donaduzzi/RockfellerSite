@@ -22,13 +22,13 @@
             main.innerHTML = `
         <h1>Resultado do Teste</h1>
         <p>Você acertou <strong>${acertos}</strong> de <strong>${total}</strong> questões.</p>
-        <button id="contato">Entrar em Contato</button>
+        <button id="contato">Voltar para o Site</button>
         <button id="refazer">Refazer Teste</button>
       `;
 
             document.getElementById("contato").addEventListener("click", () => {
-                window.open("https://wa.me/5545998008523?text=Olá! Fiz o teste de nivelamento e gostaria de mais informações.", "_blank");
-            });
+                window.location.href = "../index.html#preMatTitle"; // Go back to the main site
+                        });
 
             document.getElementById("refazer").addEventListener("click", () => {
                 window.location.href = "teste-seu-ingles.html"; // Go back to retake the test
